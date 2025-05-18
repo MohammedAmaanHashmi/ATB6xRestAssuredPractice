@@ -1,5 +1,6 @@
 package com.thetestingacademy.testng;
 
+import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
@@ -9,7 +10,7 @@ public class Lab261 {
     // smoke, Sanity
     //Before, After we can do something
 
-
+    @Description("TC#1  - verify 261 GET Request 1")
     @Test
     public void getRequest() {
         RestAssured
@@ -19,6 +20,7 @@ public class Lab261 {
                 .when().get().then().statusCode(201);
     }
 
+    @Description("TC#2  - verify GET 262 Request 1")
     @Test
     public void getRequest2() {
         RestAssured
@@ -27,5 +29,6 @@ public class Lab261 {
                 .basePath("/ping")
                 .when().get().then().statusCode(201);
     }
+
 
 }
