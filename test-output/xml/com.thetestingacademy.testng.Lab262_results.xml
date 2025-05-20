@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="ATB6xRestAssuredPractice"
-           tests="3"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.094">
+           time="0.063">
     <properties></properties>
 
 
 
             <testcase
                 name="getRequest"
-                time="0.088"
-                classname="com.thetestingacademy.testng.Lab262">
-            </testcase>
-            <testcase
-                name="getRequest2"
-                time="0.002"
+                time="0.061"
                 classname="com.thetestingacademy.testng.Lab262">
             </testcase>
             <testcase
                 name="getRequest3"
-                time="0.004"
+                time="0.002"
                 classname="com.thetestingacademy.testng.Lab262">
             </testcase>
 </testsuite>

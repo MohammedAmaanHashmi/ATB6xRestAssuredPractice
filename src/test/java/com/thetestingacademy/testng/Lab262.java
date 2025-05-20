@@ -7,7 +7,7 @@ public class Lab262 {
 
 
     @Description("TC#1  - verify GET Request 1")
-    @Test
+    @Test(enabled = false)
     public void getRequest() {
         System.out.println("TC");
     }

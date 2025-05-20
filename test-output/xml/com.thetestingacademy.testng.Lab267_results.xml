@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ATB6xRestAssuredPractice"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.090">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testGETReq"
+                time="0.002"
+                classname="com.thetestingacademy.testng.Lab267">
+            </testcase>
+            <testcase
+                name="testPUTReq"
+                time="0.003"
+                classname="com.thetestingacademy.testng.Lab267">
+            </testcase>
+            <testcase
+                name="testDeleteReq"
+                time="0.085"
+                classname="com.thetestingacademy.testng.Lab267">
+            </testcase>
+</testsuite>
