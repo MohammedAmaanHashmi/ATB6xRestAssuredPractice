@@ -1,6 +1,6 @@
 package com.thetestingacademy.gson.serialization;
 
-import com.github.javafaker.Faker;
+import com.google.gson.Gson;
 import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -8,6 +8,8 @@ import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
 
 public class Lab294 {
 
@@ -25,33 +27,38 @@ public class Lab294 {
 
         String BASE_URL = "https://restful-booker.herokuapp.com";
         String BASE_PATH = "/booking";
-        Faker faker = new Faker();
-        String firstName = faker.name().firstName();
 
         Booking booking = new Booking();
-        booking.setFirstname("Pramod");
-        booking.setLastname("Dutta");
-        booking.setTotalprice(112);
+        booking.setFirstname("James");
+        booking.setLastname("Brown");
+        booking.setTotalprice(-1);
         booking.setDepositpaid(true);
+
         BookingDates bookingDates=new BookingDates();
         bookingDates.setCheckin("2024-02-01");
-        bookingDates.setCheckout("2024-02-01");
-        booking.setBookingDates(bookingDates);
+        bookingDates.setCheckout("2024-02-05");
+        booking.setBookingdates(bookingDates);
         booking.setAdditionalneeds("Breakfast");
-        System.out.println(booking.toString());
+        System.out.println(booking);
 
-        r.baseUri(BASE_URL);
-        r.basePath(BASE_PATH);
-        r.contentType(ContentType.JSON).log().all();
-        r.body(booking);
+        // Serialization ->Java - POJO Booking -> Object -> JSONString
+        Gson gson= new Gson();
+        String jsonStringPayload=gson.toJson(booking);
+        System.out.println(jsonStringPayload);
 
-        response = r.when().log().all().post();
-        String responseString = response.asString();
-        System.out.println(responseString);
-
-
-        validatableResponse = response.then();
-        validatableResponse.statusCode(200);
+//
+//        r.baseUri(BASE_URL);
+//        r.basePath(BASE_PATH);
+//        r.contentType(ContentType.JSON).log().all();
+//        r.body(booking);
+//
+//        response = r.when().log().all().post();
+//        String responseString = response.asString();
+//        System.out.println(responseString);
+//
+//
+//        validatableResponse = response.then();
+//        validatableResponse.statusCode(200);
 
 
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ATB6xRestAssuredPractice"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.075">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testMethodTwo"
+                time="0.002"
+                classname="com.thetestingacademy.testng.Lab278">
+            </testcase>
+            <testcase
+                name="testMethodZero"
+                time="0.001"
+                classname="com.thetestingacademy.testng.Lab278">
+            </testcase>
+            <testcase
+                name="testMethodNegativeOne"
+                time="0.070"
+                classname="com.thetestingacademy.testng.Lab278">
+            </testcase>
+            <testcase
+                name="testMethodOne"
+                time="0.002"
+                classname="com.thetestingacademy.testng.Lab278">
+            </testcase>
+</testsuite>

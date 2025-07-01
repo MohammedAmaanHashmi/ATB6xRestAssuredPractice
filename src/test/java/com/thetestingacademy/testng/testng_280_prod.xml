@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true" name="ATB6xRestAssuredPractice">
         <groups>
             <run>
-                <include name="reg"></include>
+                <include name="prod"></include>
             </run>
         </groups>
         <classes>

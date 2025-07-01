@@ -1,6 +1,5 @@
 package com.thetestingacademy.gson;
 
-import com.github.javafaker.Faker;
 import com.thetestingacademy.gson.serialization.Booking;
 import com.thetestingacademy.gson.serialization.BookingDates;
 import io.qameta.allure.Description;
@@ -27,18 +26,16 @@ public class Lab292 {
 
         String BASE_URL = "https://restful-booker.herokuapp.com";
         String BASE_PATH = "/booking";
-        Faker faker = new Faker();
-        String firstName = faker.name().firstName();
 
         Booking booking = new Booking();
         booking.setFirstname("Pramod");
         booking.setLastname("Dutta");
         booking.setTotalprice(112);
         booking.setDepositpaid(true);
-        BookingDates bookingDates=new BookingDates();
-        bookingDates.setCheckin("2024-02-01");
-        bookingDates.setCheckout("2024-02-01");
-        booking.setBookingDates(bookingDates);
+        BookingDates bookingdates=new BookingDates();
+        bookingdates.setCheckin("2024-02-01");
+        bookingdates.setCheckout("2024-02-01");
+        booking.setBookingdates(bookingdates);
         booking.setAdditionalneeds("Breakfast");
         System.out.println(booking.toString());
 
@@ -54,10 +51,6 @@ public class Lab292 {
 
         validatableResponse = response.then();
         validatableResponse.statusCode(200);
-
-
-
-
 
     }
 

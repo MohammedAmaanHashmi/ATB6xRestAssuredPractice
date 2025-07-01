@@ -9,7 +9,7 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
-public class Lab292 {
+public class Lab293 {
 
     RequestSpecification r = RestAssured
             .given();
@@ -36,7 +36,7 @@ public class Lab292 {
         BookingDates bookingDates=new BookingDates();
         bookingDates.setCheckin("2024-02-01");
         bookingDates.setCheckout("2024-02-01");
-        booking.setBookingDates(bookingDates);
+        booking.setBookingdates(bookingDates);
         booking.setAdditionalneeds("Breakfast");
         System.out.println(booking.toString());
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ATB6xRestAssuredPractice"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.661">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testNonBDDStylePOSTPositive"
+                time="4.661"
+                classname="com.thetestingacademy.gson.Lab292">
+            </testcase>
+</testsuite>
